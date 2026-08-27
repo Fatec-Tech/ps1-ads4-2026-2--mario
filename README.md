@@ -1,0 +1,1 @@
+# Programa-o-de-Scripts-I---ADS-4-semestre---2-Semestre-de-2026---mario
