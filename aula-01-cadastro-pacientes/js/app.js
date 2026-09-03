@@ -36,6 +36,22 @@ function formatarData(dataISO) {
   return `${dia}/${mes}/${ano}`;
 }
 
+function calcularIdade(nascimento){
+    const hoje = new Date();
+    const anoAtual = hoje.getFullYear();
+    const novoAno = nascimento.split('-');
+    const anoNascimento = novoAno[0];
+
+    const idade = anoAtual - anoNascimento;
+
+    const mesNascimento = novoAno[1];
+    const diaNascimento = novoAno[2];
+
+    hoje.getMonth();
+    hoje.Date();
+}
+
+
 // Evento disparado quando o formulário é enviado
 formulario.addEventListener('submit', (event) => {
   event.preventDefault(); // evita o recarregamento da página
