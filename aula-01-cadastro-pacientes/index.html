@@ -46,13 +46,16 @@
 
     <!-- Tabela de pacientes -->
     <h2 class="h4 mb-3">Pacientes cadastrados</h2>
+    <input id="filtro" type="text" placeholder="Filtrar">
+    <p class="h4 mb-3" id="total">Total de Pacientes : 0</p>
     <table class="table table-striped">
       <thead>
         <tr>
-          <th>Nome</th>
+          <th id="ordenarNome">Nome</th>
           <th>E-mail</th>
           <th>Data de nascimento</th>
           <th>Telefone</th>
+          <th>Idade</th>
         </tr>
       </thead>
       <tbody id="tabela-pacientes">
