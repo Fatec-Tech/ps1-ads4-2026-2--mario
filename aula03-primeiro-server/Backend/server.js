@@ -13,6 +13,7 @@ const servidor = http.createServer((req, res) => {
 
   // 2. Rota: GET /pacientes
   if (req.method === 'GET' && req.url === '/pacientes') {
+    console.log("Dentro da rota pacientes");
     res.writeHead(200);
     res.end(JSON.stringify(pacientes));
     return;

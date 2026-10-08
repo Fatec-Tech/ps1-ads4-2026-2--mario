@@ -28,11 +28,12 @@ function formatarData(dataISO) {
 	return `${dia}/${mes}/${ano}`;
 }
 
+const resposta = await fetch(URL_API); // ún
+
 // Nova função: busca os pacientes iniciais a partir do arquivo JSON
 async function carregarPacientesIniciais() {
 	try {
-		const resposta = await fetch(URL_API); // única linha que muda de verdade
-
+		
 		if (!resposta.ok) {
 			throw new Error(`Erro HTTP: ${resposta.status}`);
 		}
