@@ -24,8 +24,27 @@ const servidor = http.createServer((req, res) => {
   res.end(JSON.stringify({ erro: 'Rota não encontrada' }));
 });
 
+const express = require('express');
+const cors = require('cors');
+
+
+const app = express();
+
+// READ (um) — GET /pacientes/:id
+app.get('/pacientes/:id', (req, res) => {
+  const id = Number(req.params.id);
+  const paciente = pacientes.find((p) => p.id === id);
+
+  if (!paciente) {
+    return res.status(404).json({ erro: 'Paciente não encontrado' });
+  }
+
+  res.json(paciente);
+});
+
+
 const PORTA = 3000;
-servidor.listen(PORTA, () => {
+app.listen(PORTA, () => {
   console.log(`Servidor rodando em http://localhost:${PORTA}`);
 });
 
