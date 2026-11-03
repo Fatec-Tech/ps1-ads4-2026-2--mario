@@ -1,5 +1,5 @@
 
-const API_URL = 'http://localhost:3000/pacientes';
+const API_URL = 'https://api-clinica-mario.onrender.com/pacientes';
 
 // Elementos da página
 const formulario = document.getElementById('form-paciente');
