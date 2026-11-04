@@ -95,6 +95,12 @@ app.delete('/pacientes/:id', (req, res) => {
 });
 
 // Inicialização do servidor
+
+app.get('/', (req, res) => {
+    res.send('API de Pacientes Online! Acesse /pacientes para ver os dados.');
+});
+
+
 const PORTA = process.env.PORT || 3000;
 
 app.listen(PORTA, () => {
